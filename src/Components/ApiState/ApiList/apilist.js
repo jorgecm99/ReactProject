@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Apilist = () => {
 
     const [ datos, setDatos] = React.useState([])
 
     React.useEffect(() => {
-        //console.log(useEffect)
         obtenerDatos()
     },[])
 
     const obtenerDatos = async () => {
         const data = await fetch('https://fakestoreapi.com/products')
         const orders = await data.json()
-        //console.log(orders)
         setDatos(orders)
     }
 
@@ -25,9 +24,13 @@ const Apilist = () => {
                 datos.map(item => (
                     <div key={JSON.stringify(item)}>
                         <h4>Id: {item.id}</h4>
-                        <h4>Name: {item.title}</h4>
-  
-                        <img src={item.image} alt={item.title} />
+
+                        <Link to={`/lista/${item.id}`} >
+                            <h4>Name: {item.title}</h4>
+                            <img src={item.image} alt={item.title} />
+                        </Link>
+                        
+                        
                     </div>
               ))}
              : 

@@ -1,34 +1,44 @@
 import './App.css';
 import React from 'react';
-import styled from '@emotion/styled';
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-import Apilist from '../Components/ApiState/ApiList/apilist';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from '../Components/Core/Header';
+import ApiDetails from '../Components/ApiState/ApiDetail';
+import Apilist from '../Components/ApiState/ApiList';
+import Register from '../Components/Formulario';
 
 function App() {
   return (
     <Router>
-      <div className="container">
-      <h1>Todo OK Jorge</h1>
-
-      <Apilist />
-
+      <Header />
+      <div className="container mt-5">
+      
       <Switch>
-      <Route path="/" exact>
-          Esta es la pagina de inicio
+
+      <Route path="/lista/:id">
+         <ApiDetails /> 
+        </Route>
+      
+        <Route path="/formulario">
+          Esta es la pagina de formulario
+          <Register />
         </Route>
 
         <Route path="/lista">
-          Esta es la pagina de lista
+         <Apilist /> 
         </Route>
 
-        <Route path="/formulario">
-          Esta es la pagina de formulario
+        <Route path="/" exact>
+          Esta es la pagina de inicio
         </Route>
-
+        
         
       </Switch>
+      </div>
       
-    </div>
+
+      
+      
+    
 
     </Router>
     
