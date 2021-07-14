@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 const HeaderStyle = styled ('header')({
     textAlign: 'center',
     color: 'black',
+    marginTop: '15px',
 })
 
 const Header = () => {
