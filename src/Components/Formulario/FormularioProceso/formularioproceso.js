@@ -96,14 +96,7 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 	`}
 `;
 
-/*const IconoValidacion = styled ('FontAwesomeIcon')({
-	position: 'absolute',
-	right: '10px',
-	bottom: '14px',
-	zIndex: '100',
-	fontSize: '16px',
 
-})*/
 
 const ContenedorTerminos = styled ('div')({
 	gridColumn: 'span 2'

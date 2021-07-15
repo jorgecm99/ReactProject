@@ -6,6 +6,12 @@ import styled from '@emotion/styled';
 
 const HeaderStyle = styled ('header')({
     textAlign: 'center',
+    background: '#776A6A',
+    verticalAlign: 'center',
+    opacity: '0.9',
+    ":hover":{
+        background: 'white'
+    }
 
 })
 
@@ -22,7 +28,8 @@ const LinkStyle = styled ('li')({
     fontFamily: 'Verdana',
     fontWeight: 'bold',
     fontSize: '20px',
-    marginTop: '25px'
+    marginTop: '25px',
+   
 })
 
 const Header = () => {
@@ -31,17 +38,17 @@ const Header = () => {
             <HeaderStyle>
                 <Navstyle>
                     <LinkStyle>
-                    <Link to="/" style={{textDecoration:"none", color: '#776A6A'}}>Home</Link>
+                    <Link to="/" style={{textDecoration:"none", color: '#F7F3F3'}}>Home</Link>
                     </LinkStyle>
 
                     <LinkStyle>
-                    <Link to="/lista" style={{textDecoration:"none", color: '#776A6A'}}>
+                    <Link to="/lista" style={{textDecoration:"none", color: '#F7F3F3'}}>
                 Products
             </Link>
                     </LinkStyle>
 
                     <LinkStyle>
-                    <Link to="/formulario" style={{textDecoration:"none", color: '#776A6A'}}>
+                    <Link to="/formulario" style={{textDecoration:"none", color: '#F7F3F3'}}>
                 Sign Up
             </Link></LinkStyle>
                 </Navstyle>

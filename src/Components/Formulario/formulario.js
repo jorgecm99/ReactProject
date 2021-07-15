@@ -75,7 +75,7 @@ const Register = () => {
 					estado={usuario}
 					cambiarEstado={cambiarUsuario}
 					tipo="text"
-					label="Usuario"
+					label="User"
 					placeholder="Write your user..."
 					name="usuario"
 					leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo."
@@ -85,7 +85,7 @@ const Register = () => {
 					estado={nombre}
 					cambiarEstado={cambiarNombre}
 					tipo="text"
-					label="Nombre"
+					label="Name"
 					placeholder="And now, your name..."
 					name="usuario"
 					leyendaError="El nombre solo puede contener letras y espacios."
@@ -95,7 +95,7 @@ const Register = () => {
 					estado={password}
 					cambiarEstado={cambiarPassword}
 					tipo="password"
-					label="Contraseña"
+					label="Password"
 					name="password1"
 					leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
 					expresionRegular={expresiones.password}
@@ -104,7 +104,7 @@ const Register = () => {
 					estado={password2}
 					cambiarEstado={cambiarPassword2}
 					tipo="password"
-					label="Repetir Contraseña"
+					label="Repeat password"
 					name="password2"
 					leyendaError="Ambas contraseñas deben ser iguales."
 					funcion={validarPassword2}
@@ -113,7 +113,7 @@ const Register = () => {
 					estado={correo}
 					cambiarEstado={cambiarCorreo}
 					tipo="email"
-					label="Correo Electrónico"
+					label="Email"
 					placeholder="xxxx@yyyy.zzz"
 					name="correo"
 					leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
@@ -123,7 +123,7 @@ const Register = () => {
 					estado={telefono}
 					cambiarEstado={cambiarTelefono}
 					tipo="text"
-					label="Teléfono"
+					label="Phone"
 					placeholder="xxx yyy zzz"
 					name="telefono"
 					leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."

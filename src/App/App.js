@@ -6,6 +6,7 @@ import ApiDetails from '../Components/ApiState/ApiDetail';
 import Apilist from '../Components/ApiState/ApiList';
 import Register from '../Components/Formulario';
 import styled from '@emotion/styled';
+import MainComponent from '../Components/Home';
 
 
 const Bodystyled = styled ('body')({
@@ -34,6 +35,7 @@ function App() {
         </Route>
 
         <Route path="/" exact>
+          <MainComponent />
         </Route>
         
         
