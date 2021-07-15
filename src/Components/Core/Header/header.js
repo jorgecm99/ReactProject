@@ -6,25 +6,46 @@ import styled from '@emotion/styled';
 
 const HeaderStyle = styled ('header')({
     textAlign: 'center',
-    color: 'black',
-    marginTop: '15px',
+
+})
+
+const Navstyle = styled ('ul')({
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
+
+})
+
+const LinkStyle = styled ('li')({
+    marginLeft: '10px',
+    listStyle: 'none',
+    fontFamily: 'Verdana',
+    fontWeight: 'bold',
+    fontSize: '20px',
+    marginTop: '25px'
 })
 
 const Header = () => {
     return (
         <header>
             <HeaderStyle>
-            <Link to="/" className="btn btn-dark">
-                Inicio
-            </Link>
+                <Navstyle>
+                    <LinkStyle>
+                    <Link to="/" style={{textDecoration:"none", color: '#776A6A'}}>Home</Link>
+                    </LinkStyle>
 
-            <Link to="/lista" className="btn btn-dark">
-                Lista
+                    <LinkStyle>
+                    <Link to="/lista" style={{textDecoration:"none", color: '#776A6A'}}>
+                Products
             </Link>
+                    </LinkStyle>
 
-            <Link to="/formulario" className="btn btn-dark">
-                Formulario
-            </Link>
+                    <LinkStyle>
+                    <Link to="/formulario" style={{textDecoration:"none", color: '#776A6A'}}>
+                Sign Up
+            </Link></LinkStyle>
+                </Navstyle>
+
             </HeaderStyle>
 
             

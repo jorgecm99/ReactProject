@@ -5,12 +5,19 @@ import Header from '../Components/Core/Header';
 import ApiDetails from '../Components/ApiState/ApiDetail';
 import Apilist from '../Components/ApiState/ApiList';
 import Register from '../Components/Formulario';
+import styled from '@emotion/styled';
+
+
+const Bodystyled = styled ('body')({
+  background: '#E1E1E1'
+})
 
 function App() {
   return (
     <Router>
+      <Bodystyled>
       <Header />
-      <div className="container mt-5">
+      <div className="container mt-0">
       
       <Switch>
 
@@ -19,7 +26,6 @@ function App() {
         </Route>
       
         <Route path="/formulario">
-          Esta es la pagina de formulario
           <Register />
         </Route>
 
@@ -28,12 +34,14 @@ function App() {
         </Route>
 
         <Route path="/" exact>
-          Esta es la pagina de inicio
         </Route>
         
         
       </Switch>
       </div>
+
+      </Bodystyled>
+      
       
 
       

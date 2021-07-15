@@ -18,7 +18,6 @@ const Apilist = () => {
 
     return (
         <div>
-            <h1>Oh my</h1>
         <ul>
             {
                 datos.map(item => (

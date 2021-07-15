@@ -1,1 +1,1 @@
-export { default} from './formularioproceso';
+export { default } from './formularioproceso';

@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from './FormularioProceso';
+import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, MensajeExito, MensajeError} from './FormularioProceso/formularioproceso';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../Inputs';
+import { Boton } from './FormularioProceso/formularioproceso';
 
 const Register = () => {
     const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
@@ -57,7 +58,7 @@ const Register = () => {
 			cambiarUsuario({campo: '', valido: ''});
 			cambiarNombre({campo: '', valido: null});
 			cambiarPassword({campo: '', valido: null});
-			cambiarPassword2({campo: '', valido: 'null'});
+			cambiarPassword2({campo: '', valido: null});
 			cambiarCorreo({campo: '', valido: null});
 			cambiarTelefono({campo: '', valido: null});
 
@@ -75,7 +76,7 @@ const Register = () => {
 					cambiarEstado={cambiarUsuario}
 					tipo="text"
 					label="Usuario"
-					placeholder="john123"
+					placeholder="Write your user..."
 					name="usuario"
 					leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo."
 					expresionRegular={expresiones.usuario}
@@ -85,7 +86,7 @@ const Register = () => {
 					cambiarEstado={cambiarNombre}
 					tipo="text"
 					label="Nombre"
-					placeholder="John Doe"
+					placeholder="And now, your name..."
 					name="usuario"
 					leyendaError="El nombre solo puede contener letras y espacios."
 					expresionRegular={expresiones.nombre}
@@ -113,7 +114,7 @@ const Register = () => {
 					cambiarEstado={cambiarCorreo}
 					tipo="email"
 					label="Correo Electrónico"
-					placeholder="john@correo.com"
+					placeholder="xxxx@yyyy.zzz"
 					name="correo"
 					leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
 					expresionRegular={expresiones.correo}
@@ -123,7 +124,7 @@ const Register = () => {
 					cambiarEstado={cambiarTelefono}
 					tipo="text"
 					label="Teléfono"
-					placeholder="4491234567"
+					placeholder="xxx yyy zzz"
 					name="telefono"
 					leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."
 					expresionRegular={expresiones.telefono}
@@ -140,18 +141,18 @@ const Register = () => {
 							checked={terminos} 
 							onChange={onChangeTerminos}
 						/>
-						Acepto los Terminos y Condiciones
+						Accept terms and conditions
 					</Label>
 				</ContenedorTerminos>
 				{formularioValido === false && <MensajeError>
 					<p>
 						<FontAwesomeIcon icon={faExclamationTriangle}/>
-						<b>Error:</b> Por favor rellena el formulario correctamente.
+						<b>Error:</b> Please, refill the form correctly.
 					</p>
 				</MensajeError>}
 				<ContenedorBotonCentrado>
-					<Boton type="submit">Enviar</Boton>
-					{formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+					<Boton type="submit">Send</Boton>
+					{formularioValido === true && <MensajeExito>Form has been sent succesfully!</MensajeExito>}
 				</ContenedorBotonCentrado>
 			</Formulario>
 		</main>
