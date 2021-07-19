@@ -25,6 +25,14 @@ function App() {
       <Route path="/lista/:id">
          <ApiDetails /> 
         </Route>
+
+        <Route path="/cart" exact>
+          Cart
+        </Route>
+
+        <Route path="/delivery" exact>
+          Delivery
+        </Route>
       
         <Route path="/formulario">
           <Register />
@@ -33,6 +41,8 @@ function App() {
         <Route path="/lista">
          <Apilist /> 
         </Route>
+
+        
 
         <Route path="/" exact>
           <MainComponent />

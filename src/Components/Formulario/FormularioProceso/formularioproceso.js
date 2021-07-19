@@ -118,7 +118,8 @@ const Boton = styled ('button')({
 	fontWeight: 'bold',
 	border:'none',
 	borderRadius: '3px',
-	cursor: 'pointer'
+	cursor: 'pointer',
+	marginBottom: '25px'
 
 })
 	
